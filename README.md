@@ -5,6 +5,15 @@ Based on https://github.com/cmulk/wireguard-docker. Have a look there for docume
 
 
 
+## Host system preparation
+
+    sudo apt-get install linux-headers-generic
+
+    sudo apt-get install linux-generic
+
+
+
+
     docker build  -t wireguard:local github.com/brandrik/wireguard_docker_arm
 
 

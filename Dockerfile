@@ -49,7 +49,7 @@ RUN set -x \
 	) 
     #\
 	#&& apk del .build-deps
-CMD "ls -lh /wireguard/src" 
+#CMD "ls -lh /wireguard/src" 
 
 COPY entrypoint.sh "/usr/local/bin/entrypoint.sh"
 
