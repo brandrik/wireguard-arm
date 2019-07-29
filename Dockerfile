@@ -10,8 +10,8 @@ RUN apt update && \
 WORKDIR /scripts
 ENV PATH="/scripts:${PATH}"
 COPY install-module /scripts
-COPY run /scripts
-COPY genkeys /scripts
+COPY scripts /scripts
 RUN chmod 755 /scripts/*
 
-CMD ["run"]
+ENTRYPOINT ["/scripts/run.sh"]
+CMD []
