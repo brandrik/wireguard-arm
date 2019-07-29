@@ -2,7 +2,6 @@ version: "2"
 services:
  vpn:
   image: wireguard:local
-  build: github.com/cmulk/wireguard-docker
   volumes:
    - data:/etc/wireguard
   networks:
