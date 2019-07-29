@@ -27,7 +27,7 @@ RUN apk add --no-cache \
 	build-base \
 	ca-certificates \
 	elfutils-libelf \
-	libmnl-dev \
+	libmnl-dev \nano 
     alpine-sdk \ 
     gcc wget \ 
     make  \
@@ -46,10 +46,12 @@ RUN set -x \
 		&& make tools \
 		&& make -C tools install \
 		&& make -C tools clean \
-	) \
-	&& apk del .build-deps
+	) 
+    #\
+	#&& apk del .build-deps
+CMD "ls -lh /wireguard/src" 
 
-COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+COPY entrypoint.sh "/usr/local/bin/entrypoint.sh"
 
 ENTRYPOINT [ "/usr/local/bin/entrypoint.sh" ]
 CMD [ "wg", "--help" ]
