@@ -6,7 +6,7 @@ cd /wireguard/src
 echo "Building the wireguard kernel module..."
 make module
 echo "Installing the wireguard kernel module..."
-make module-install
+make install module
 echo "Cleaning up..."
 make clean
 )
