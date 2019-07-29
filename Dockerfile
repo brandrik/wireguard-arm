@@ -27,7 +27,7 @@ RUN apk add --no-cache \
 	build-base \
 	ca-certificates \
 	elfutils-libelf \
-	libmnl-dev \nano 
+	libmnl-dev \nano \
     alpine-sdk \ 
     gcc wget \ 
     make  \
